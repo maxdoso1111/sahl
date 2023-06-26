@@ -22,7 +22,7 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
-   
+   <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -38,7 +38,7 @@ export default function Post({ post, posts, preview }) {
             
           </>
         )}
-      
+       </Container>
   
   )
 }
