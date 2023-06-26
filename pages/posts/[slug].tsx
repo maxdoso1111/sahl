@@ -31,7 +31,7 @@ export default function Post({ post, posts, preview }) {
           <>
             <article>
               <Head>
-                <meta name="og:title" content="{`${post.title}`}"/>
+                <meta name="og:title" content={post.title} />
               </Head>
               <footer>
                 {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
