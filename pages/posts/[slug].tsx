@@ -22,12 +22,28 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
+      <Container>
+        
+        {router.isFallback ? (
+          <PostTitle>Loading…</PostTitle>
+        ) : (
+          <>
+            <article>
+              <Head>
                 <meta name="og:title" content={post.title} />
-             
-    
-  
+              </Head>
+              
+            </article>
+
+            
+          </>
+        )}
+      </Container>
   )
 }
+               
+             
+ 
 
 export const getStaticProps: GetStaticProps = async ({
   params,
