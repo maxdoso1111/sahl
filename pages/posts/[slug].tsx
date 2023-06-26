@@ -22,7 +22,7 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
-    <meta property="og:title" content={post.title}>
+    <meta property="og:title" content={post.title}/>
     <meta property="og:url" content={post.url} />
     <Layout preview={preview}>
       <Container>
