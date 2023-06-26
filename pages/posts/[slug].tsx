@@ -16,12 +16,3 @@ import { CMS_NAME } from '../../lib/constants'
 export default function Post()
 {
 }
-  
-export const getStaticPaths: GetStaticPaths = async () => {
-  const allPosts = await getAllPostsWithSlug()
-
-  return {
-    paths: allPosts.edges.map(({ node }) => `/posts/${node.slug}`) || [],
-    fallback: true,
-  }
-}
