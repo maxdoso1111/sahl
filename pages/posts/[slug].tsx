@@ -3,7 +3,6 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Container from '../../components/container'
-import PostBody from '../../components/post-body'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import SectionSeparator from '../../components/section-separator'
@@ -42,7 +41,6 @@ export default function Post({ post, posts, preview }) {
                 author={post.author}
                 categories={post.categories}
               />
-              <PostBody/>
               <footer>
                 {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
               </footer>
