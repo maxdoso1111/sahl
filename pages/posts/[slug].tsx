@@ -22,20 +22,7 @@ export default function Post({ post, posts, preview }) {
 
   return (
    
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-              <article>
-              <Head>
-              </Head>
-            </article>
-
-            
-          </>
-        )}
-      </Container>
+ 
     
   )
 }
