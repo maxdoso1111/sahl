@@ -16,10 +16,12 @@ import { CMS_NAME } from '../../lib/constants'
 export default function Post({ post, posts, preview }) 
 {
   const router = useRouter()
+  {
     <Head>
     <meta property="og:title" content={post.title} />
     <meta property="og:url" content={`https://3rfnytech.com/${node.slug}`} />
    </Head>
+  }
 }
 
 export const getStaticProps: GetStaticProps = async ({
