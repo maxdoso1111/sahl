@@ -25,12 +25,10 @@ export default function Post({ post, posts, preview }) {
    
             <article>
               <Head>
-                
                 <meta name="og:url" content={post.url} />
                 <meta name="og:title" content={post.title} />
               </Head>
             </article>
-        )}
     
   
   )
