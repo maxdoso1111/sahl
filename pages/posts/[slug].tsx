@@ -23,7 +23,6 @@ export default function Post({ post, posts, preview }) {
   return (
    
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
