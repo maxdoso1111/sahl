@@ -34,19 +34,10 @@ export default function Post({ post, posts, preview }) {
                 <title>
                   {`${post.title}`}
                 </title>
-                <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
               </Head>
               <PostHeader
                 title={post.title}
-                coverImage={post.featuredImage}
-                date={post.date}
-                author={post.author}
-                categories={post.categories}
               />
-              <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
             </article>
 
             
