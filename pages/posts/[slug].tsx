@@ -22,7 +22,7 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+   
       <Container>
         
         {router.isFallback ? (
@@ -53,7 +53,7 @@ export default function Post({ post, posts, preview }) {
           </>
         )}
       </Container>
-    </Layout>
+  
   )
 }
 
