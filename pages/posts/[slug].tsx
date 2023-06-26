@@ -28,11 +28,6 @@ export default function Post({ post, posts, preview }) {
                 </title>
               </Head>
               <PostHeader
-                title={post.title}
-                coverImage={post.featuredImage}
-                date={post.date}
-                author={post.author}
-                categories={post.categories}
               />
               
             </article>
