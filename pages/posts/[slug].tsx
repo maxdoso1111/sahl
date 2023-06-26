@@ -13,25 +13,12 @@ import Tags from '../../components/tags'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import { CMS_NAME } from '../../lib/constants'
 
-export default function Post({ post, posts, preview }) {
+export default function Post({ post, posts, preview }) 
+{
   const router = useRouter()
-  const morePosts = posts?.edges
-
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
-
-  return (
     <meta property="og:title" content={post.title} />
-				<link rel="canonical" href={`https://${host}/${path}`} />
-				<meta property="og:description" content={removeTags(post.excerpt)} />
-				<meta property="og:url" content={`https://3rfnytech.com/${node.slug}`} />
-				<meta property="og:type" content="article" />
-				<meta property="og:locale" content="en_US" />
-				<meta property="og:site_name" content={host.split('.')[0]} />
-				<meta property="article:published_time" content={post.dateGmt} />
-				<meta property="article:modified_time" content={post.modifiedGmt} />
-  )
+    <meta property="og:url" content={`https://3rfnytech.com/${node.slug}`} />
+  
 }
 
 export const getStaticProps: GetStaticProps = async ({
