@@ -29,7 +29,7 @@ export default function Post({ post, posts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+              <article>
               <Head>
                 <title>
                   {`${post.title}`}
@@ -37,7 +37,15 @@ export default function Post({ post, posts, preview }) {
               </Head>
               <PostHeader
                 title={post.title}
+                coverImage={post.featuredImage}
+                date={post.date}
+                author={post.author}
+                categories={post.categories}
               />
+              <PostBody content={post.content} />
+              <footer>
+                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
+              </footer>
             </article>
 
             
