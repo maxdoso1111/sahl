@@ -19,7 +19,7 @@ export default function Post({ post, posts, preview })
   {
     <Head>
     <meta property="og:title" content={post.title} />
-    <meta property="og:url" content={`https://3rfnytech.com/${node.slug}`} />
+    <meta property="og:url" content={`https://3rfnytech.com/${slug}`} />
    </Head>
   }
 }
