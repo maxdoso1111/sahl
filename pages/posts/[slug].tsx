@@ -32,7 +32,7 @@ export default function Post({ post, posts, preview }) {
             <article>
               <Head>
                 <title>
-                  {`${post.title}`}
+                  <meta name="og:title" content="${post.title}"/>
                 </title>
               </Head>
               <footer>
