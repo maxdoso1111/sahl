@@ -13,14 +13,48 @@ import Tags from '../../components/tags'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import { CMS_NAME } from '../../lib/constants'
 
-export default function Post({ post, posts, preview }) 
-{
+export default function Post({ post, posts, preview }) {
   const router = useRouter()
-  {
-    <Head>
-    <meta property="og:title" content={post.title} />
-   </Head>
+  const morePosts = posts?.edges
+
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage statusCode={404} />
   }
+
+  return (
+   
+      <Container>
+        <Header />
+        {router.isFallback ? (
+          <PostTitle>Loading…</PostTitle>
+        ) : (
+          <>
+            <article>
+              <Head>
+                <title>
+                  {`${post.title}`}
+                </title>
+                <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
+              </Head>
+              <PostHeader
+                title={post.title}
+                coverImage={post.featuredImage}
+                date={post.date}
+                author={post.author}
+                categories={post.categories}
+              />
+              <PostBody content={post.content} />
+              <footer>
+                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
+              </footer>
+            </article>
+
+            
+          </>
+        )}
+      </Container>
+    
+  )
 }
 
 export const getStaticProps: GetStaticProps = async ({
