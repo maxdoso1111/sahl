@@ -32,7 +32,7 @@ module.exports = {
           },
         ],
         permanent: false,
-         destination: 'https://3rfnytech.com/:slug*',
+         destination: 'https://sahlt3rf.com/:slug*',
       },
       // if the header `x-dont-redirect` is present,
       // this redirect will NOT be applied
@@ -48,7 +48,7 @@ module.exports = {
           },
         ],
         permanent: false,
-         destination: 'https://3rfnytech.com/:slug*',
+         destination: 'https://sahlt3rf.com/:slug*',
       },
       
     ]
